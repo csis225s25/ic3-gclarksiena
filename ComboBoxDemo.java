@@ -18,17 +18,17 @@ class ComboBoxDemo extends JFrame implements ItemListener {
 	static JLabel label, label1;
 
 	// combobox
-	static JComboBox cBox1;
+	static JComboBox<String> cBox1;
 
 	// main class
 	public static void main(String[] args)
 	{
 		// create a new frame
 		frame = new JFrame("Combo Box Demo");
-		
+
         // tell the JFrame that when someone closes the
         // window, the application should terminate
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);		
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		// create a object
 		ComboBoxDemo s = new ComboBoxDemo();
@@ -40,8 +40,8 @@ class ComboBoxDemo extends JFrame implements ItemListener {
 		String s1[] = { "Albany", "Schenectady", "Troy", "Glens Falls", "Catskill" };
 
 		// create checkbox
-        cBox1 = new JComboBox(s1);
-		
+        cBox1 = new JComboBox<>(s1);
+
 		// add ItemListener
 		cBox1.addItemListener(s);
 
